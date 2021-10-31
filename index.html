@@ -19,8 +19,8 @@
 
                 var today = new Date();
                 var hours = today.getHours();
+                var ampm = hours >= 12 ? 'pm' : 'am';
                 hours = hours > 12 ? hours - 12 : hours;
-                var ampm = hours >= 12 ? 'am' : 'pm';
                 var m = today.getMinutes();
                 var s = today.getSeconds();
                 m = checkTime(m);
