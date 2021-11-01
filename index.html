@@ -19,15 +19,25 @@
 
                 var today = new Date();
                 var hours = today.getHours();
-                var ampm = hours >= 12 ? 'pm' : 'am';
+                var ampm = 'AM';
+                if (hours == 0) {
+                    hours = 12;
+                }
+                if (hours > 12) {
+                    hours = hours - 12;
+                    ampm = 'PM'
+                }
                 hours = hours > 12 ? hours - 12 : hours;
                 var m = today.getMinutes();
                 var s = today.getSeconds();
                 m = checkTime(m);
                 s = checkTime(s);
-                document.getElementById('txt').innerHTML = "Current time is: " +
-                    hours + ":" + m + ":" + s + ampm;
+                hours = hours < 10 ? "0" + hours : hours;
+                m = m < 10 ? "0" : m;
+                document.getElementById('txt').innerHTML = "Current Time is " +
+                    hours + " : " + m + " : " + s + " " + ampm;
                 var t = setTimeout(startTime, 500);
+
             }
 
             function checkTime(i) {
