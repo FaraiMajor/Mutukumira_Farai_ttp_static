@@ -33,7 +33,6 @@
                 m = checkTime(m);
                 s = checkTime(s);
                 hours = hours < 10 ? "0" + hours : hours;
-                m = m < 10 ? "0" : m;
                 document.getElementById('txt').innerHTML = "Current Time is " +
                     hours + " : " + m + " : " + s + " " + ampm;
                 var t = setTimeout(startTime, 500);
