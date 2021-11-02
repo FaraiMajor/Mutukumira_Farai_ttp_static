@@ -1,3 +1,4 @@
+<!--Be sure to hover over the box for a cool surprise-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,8 +30,8 @@
                 hours = checkTime(hours);
                 min = checkTime(min);
                 sec = checkTime(sec);
-                document.getElementById('txt').innerHTML = "Current Time is " +
-                    hours + " : " + min + " : " + sec + " " + ampm;
+                document.getElementById('txt').innerHTML =
+                    hours + ":" + min + ":" + sec + ampm;
                 var t = setTimeout(startTime, 500);
 
             }
